@@ -1,4 +1,6 @@
-﻿Console.Write("Введите m = ");
+﻿//Программа находит сумму элементов. находящихся на главной диагонали массива
+
+Console.Write("Введите m = ");
 int m = int.Parse(Console.ReadLine());
 Console.Write("Введите n = ");
 int n = int.Parse(Console.ReadLine());
