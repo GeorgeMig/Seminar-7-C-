@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//ПРОГРАММА, КОТОРАЯ НАХОДИТ ЭЛЕМЕНТЫ МАССИВА, У КОТОРЫХ ОБА ИНДЕКСА ЧЕТНЫЕ И ВОЗВОДИТ ЭТИ ЭЛЕМЕНТЫ В КВАДРАТ
 
 Console.Write("Введите m = ");
 int m = int.Parse(Console.ReadLine());
