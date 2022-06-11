@@ -8,7 +8,7 @@ int[,] GetArray(int a, int b)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            array[i, j] = rnd.Next(- 10 , 10);
+            array[i, j] = rnd.Next(- 100, 100);
 
         }
     }
