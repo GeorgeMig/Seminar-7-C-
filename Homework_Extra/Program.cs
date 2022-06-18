@@ -15,7 +15,7 @@
 
 int[,] arrRes = GetArray(5, 5); //метод создания массива 
 
-void RevArr(int [,] array)
+void RevArr(int[,] array)
 {
     int t = 0;
     for (int i = 0; i < array.GetLength(0); i = i + 2)
@@ -36,6 +36,8 @@ RevArr(arrRes); // разворот некоторых строчек масси
 
 void PrintArray(int[,] array)
 {
+    Console.WriteLine("Массив: ");
+    Console.WriteLine();
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
@@ -49,22 +51,28 @@ void PrintArray(int[,] array)
 PrintArray(arrRes);// печать массива
 
 
-
-for (int i = 0; i < arrRes.GetLength(0); i++)
+void DetermineSequenceArr(int[,] array)
 {
-    for (int j = 0; j < arrRes.GetLength(1) - 1; j++)
+    Console.WriteLine();
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        if (arrRes [i, j] < arrRes [i, j + 1])
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-        Console.WriteLine("Plus");
-        break;
-        }
-        else if (arrRes [i, j] > arrRes [i, j + 1])
-        {
-        Console.WriteLine("Minus");
-        break;
+            if (array[i, j] < array[i, j + 1] && array[i, arrRes.GetLength(1) - 2] < array[i, arrRes.GetLength(1) - 1])
+            {
+                Console.WriteLine($"Последовательность в строке {i + 1} является возрастающей");
+                break;
+            }
+            else if (array[i, j] > array[i, j + 1] && array[i, array.GetLength(1) - 2] > array[i, array.GetLength(1) - 1])
+            {
+                Console.WriteLine($"Последовательность в строке {i + 1} является убывающей");
+                break;
+            }
+
         }
 
     }
-
+    Console.WriteLine();
 }
+
+DetermineSequenceArr (arrRes);
